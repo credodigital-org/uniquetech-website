@@ -475,3 +475,80 @@
     line-height: 1.5;
   }
 }
+
+
+/* COMPACT FOOTER — TABLET */
+@media (min-width: 621px) and (max-width: 900px) {
+  .footer {
+    padding-top: 24px !important;
+  }
+
+  .footergrid {
+    grid-template-columns: 1.2fr 0.8fr !important;
+    gap: 18px 24px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .footergrid > div {
+    min-width: 0;
+  }
+
+  /* Reduce logo and intro spacing */
+  .footbrand img {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .footbrand b {
+    font-size: 19px !important;
+  }
+
+  .footergrid > div:first-child > p {
+    max-width: 260px !important;
+    margin: 10px auto !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+
+  .footer .social {
+    gap: 8px !important;
+    margin-top: 8px !important;
+  }
+
+  .footer .social img {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Reduce space between headings and links */
+  .footer h3 {
+    font-size: 16px !important;
+    margin: 0 0 10px !important;
+    padding-bottom: 6px !important;
+  }
+
+  .footergrid > div > p {
+    margin: 5px 0 !important;
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+  }
+
+  .footergrid > div > a:not(.brand) {
+    margin: 4px 0 !important;
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+  }
+
+  .footer .footicon {
+    width: 15px !important;
+    height: 15px !important;
+    margin-right: 5px !important;
+  }
+
+  .footer .copyright {
+    padding: 13px 10px !important;
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+  }
+}
+
