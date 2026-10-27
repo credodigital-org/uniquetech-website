@@ -377,3 +377,101 @@
     max-width: 320px;
   }
 }
+
+
+/* Compact responsive footer */
+.footer {
+  padding-top: 35px;
+}
+
+.footergrid {
+  gap: 24px 28px;
+  padding-bottom: 28px;
+}
+
+/* Reduce spacing in each section */
+.footer h3 {
+  font-size: 18px;
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+}
+
+.footergrid > div:first-child > p {
+  margin: 12px auto;
+  line-height: 1.5;
+}
+
+.footergrid > div > p {
+  margin: 7px 0;
+  line-height: 1.5;
+}
+
+.footergrid > div > a:not(.brand) {
+  margin: 5px 0;
+  line-height: 1.4;
+}
+
+.footer .social {
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.footer .social img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.footer .copyright {
+  padding: 20px 12px;
+  font-size: 12px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .footer {
+    padding-top: 30px;
+  }
+
+  .footergrid {
+    gap: 22px 18px;
+    padding-bottom: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 620px) {
+  .footer {
+    padding-top: 26px;
+  }
+
+  .footergrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-bottom: 22px;
+  }
+
+  .footergrid > div:first-child {
+    grid-column: auto;
+  }
+
+  .footergrid > div:first-child > p,
+  .footergrid > div > p {
+    max-width: 300px;
+  }
+
+  .footer h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
+
+  .footer .footbrand img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .footer .copyright {
+    padding: 16px 10px;
+    line-height: 1.5;
+  }
+}

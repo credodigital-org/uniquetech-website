@@ -931,3 +931,292 @@
     padding: 12px;
   }
 }
+
+
+/* FIX: About page — Our Vision image/text overlap */
+
+/* Keep grid children inside their columns */
+.about-vision,
+.about-vision .wrap,
+.vision-grid,
+.vision-collage,
+.vision-copy {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 32px;
+}
+
+.vision-collage {
+  width: 100%;
+  min-height: 0;
+  height: 420px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: 1.05fr 0.95fr;
+}
+
+.vision-collage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  object-fit: cover;
+}
+
+.vision-copy {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.vision-copy h2 {
+  margin-bottom: 18px;
+}
+
+.vision-copy p {
+  position: relative;
+  margin: 0 0 14px;
+  line-height: 1.6;
+}
+
+/* Tablet: images first, text underneath */
+@media (min-width: 621px) and (max-width: 900px) {
+  .about-vision {
+    padding: 40px 0;
+  }
+
+  .vision-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .vision-collage {
+    width: 100%;
+    height: clamp(280px, 48vw, 400px);
+  }
+
+  .vision-copy {
+    width: 100%;
+    max-width: 680px;
+    margin-inline: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 620px) {
+  .vision-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .vision-collage {
+    height: clamp(240px, 72vw, 320px);
+  }
+
+  .vision-copy {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .vision-copy h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .vision-copy p {
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+  }
+}
+
+/* FIX: Introduction images overlapping text on tablets */
+@media (min-width: 621px) and (max-width: 900px) {
+  .about-introduction .about-intro-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 28px !important;
+  }
+
+  .about-introduction .about-photo-collage {
+    position: relative !important;
+    display: grid !important;
+    width: 100% !important;
+    height: 380px !important;
+    min-height: 0 !important;
+    grid-template-columns: 1.15fr 1fr !important;
+    grid-template-rows: repeat(3, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    overflow: hidden !important;
+  }
+
+  .about-introduction .about-photo-collage img {
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .about-introduction .about-photo-collage .collage-main {
+    grid-row: 1 / 4 !important;
+  }
+
+  .about-introduction .about-intro-copy {
+    position: relative !important;
+    z-index: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+}
+
+/* FIX: Our Vision text overlapping collage images */
+
+@media (max-width: 900px) {
+  .about-vision .vision-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 24px !important;
+  }
+
+  .about-vision .vision-collage {
+    position: relative !important;
+    display: grid !important;
+    width: 100% !important;
+    height: 380px !important;
+    min-height: 0 !important;
+    flex: none !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: 1.05fr 0.95fr !important;
+    gap: 10px !important;
+    overflow: hidden !important;
+  }
+
+  .about-vision .vision-collage .vision-main {
+    grid-column: 1 / -1 !important;
+  }
+
+  .about-vision .vision-collage img {
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .about-vision .vision-copy {
+    position: relative !important;
+    inset: auto !important;
+    z-index: 1 !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    flex: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  .about-vision .vision-copy h2,
+  .about-vision .vision-copy p {
+    position: static !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .about-vision .vision-collage {
+    height: 280px !important;
+    gap: 8px !important;
+  }
+}
+
+/* FIX: Affordability & Quality cards overflowing on tablets */
+
+.about-advantages,
+.about-advantages .wrap,
+.advantage-layout,
+.advantage-column {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 621px) and (max-width: 900px) {
+  .advantage-layout {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 22px !important;
+    width: 100% !important;
+  }
+
+  .value-diagram {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 170px !important;
+    height: 170px !important;
+    justify-self: center !important;
+  }
+
+  .advantage-column {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  .advantage-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 90px;
+    padding: 12px !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+    overflow-wrap: anywhere;
+  }
+
+  .advantage-card h3,
+  .advantage-card p {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Mobile: one card per row */
+@media (max-width: 620px) {
+  .advantage-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 18px !important;
+  }
+
+  .advantage-column {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .advantage-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
