@@ -1,0 +1,1301 @@
+/* Reverse button colors on hover, keyboard focus, and touch press. */
+.button:not(.homebutton):not(.outlinebutton):hover,
+.button:not(.homebutton):not(.outlinebutton):focus-visible {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: #123761 !important;
+}
+.homehero .homebutton:hover,
+.homehero .homebutton:focus-visible {
+  background: #123761 !important;
+  border-color: #fff !important;
+  color: #fff !important;
+}
+.homehero .outlinebutton:hover,
+.homehero .outlinebutton:focus-visible {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: #123761 !important;
+}
+.navcta:hover,
+.navcta:focus-visible {
+  background: #fff !important;
+  border-color: #123761 !important;
+  color: #123761 !important;
+}
+@media (hover: none) {
+  .button:not(.homebutton):not(.outlinebutton):active {
+    background: #fff !important;
+    border-color: #fff !important;
+    color: #123761 !important;
+  }
+  .homehero .homebutton:active {
+    background: #123761 !important;
+    border-color: #fff !important;
+    color: #fff !important;
+  }
+  .homehero .outlinebutton:active {
+    background: #fff !important;
+    border-color: #fff !important;
+    color: #123761 !important;
+  }
+  .navcta:active {
+    background: #fff !important;
+    border-color: #123761 !important;
+    color: #123761 !important;
+  }
+}
+/* Refined responsive hover and touch motion across the site. */
+@media (hover: hover) and (pointer: fine) {
+  .homecard:hover,
+  .projectcard:hover,
+  .service-catalog-card:hover,
+  .servicefull:hover,
+  .portfolio-card:hover,
+  .advantage-card:hover,
+  .contact-detail-card:hover,
+  .benefit:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 34px rgb(16 45 75 / 20%);
+  }
+  .homecard:hover .cardphoto img,
+  .projectcard:hover > img,
+  .servicefull:hover > img,
+  .service-catalog-card:hover .service-catalog-photo > img,
+  .portfolio-card:hover .portfolio-photo img {
+    transform: scale(1.045);
+  }
+  .social a:hover { transform: translateY(-4px) scale(1.04); }
+  .nav a:not(.navcta):hover { transform: translateY(-1px); }
+}
+.homecard,
+.projectcard,
+.service-catalog-card,
+.servicefull,
+.portfolio-card,
+.advantage-card,
+.contact-detail-card,
+.benefit,
+.social a,
+.nav a:not(.navcta) {
+  transition: transform .26s cubic-bezier(.2,.75,.25,1), box-shadow .26s ease,
+    border-color .22s ease, background-color .22s ease, color .22s ease;
+}
+@media (hover: none) {
+  .homecard:active,
+  .projectcard:active,
+  .service-catalog-card:active,
+  .servicefull:active,
+  .portfolio-card:active,
+  .advantage-card:active,
+  .contact-detail-card:active,
+  .benefit:active {
+    transform: scale(.99);
+    box-shadow: 0 10px 22px rgb(16 45 75 / 18%);
+  }
+  .social a:active { transform: scale(.94); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .homecard,
+  .projectcard,
+  .service-catalog-card,
+  .servicefull,
+  .portfolio-card,
+  .advantage-card,
+  .contact-detail-card,
+  .benefit,
+  .social a,
+  .nav a:not(.navcta) {
+    transition: none !important;
+  }
+}
+
+/* Keep the complete hero artwork visible, then place readable copy beneath it on smaller screens. */
+@media (max-width: 760px) {
+  .homehero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    aspect-ratio: auto !important;
+    min-height: 0 !important;
+    overflow: hidden;
+    background: #123963 !important;
+  }
+  .homeherobg {
+    position: relative !important;
+    inset: auto !important;
+    display: block !important;
+    flex: none;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1440 / 750 !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    background: #123963 !important;
+  }
+  .homeherocopy {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: clamp(24px, 6vw, 38px) clamp(20px, 6vw, 36px) clamp(30px, 7vw, 44px) !important;
+    background: #123963 !important;
+    color: #fff !important;
+    box-shadow: none !important;
+  }
+  .homeherocopy h1 {
+    max-width: 18ch;
+    font-size: clamp(30px, 7vw, 42px) !important;
+    line-height: 1.12 !important;
+    margin-bottom: 16px !important;
+  }
+  .homeherocopy p {
+    max-width: 58ch;
+    font-size: clamp(14px, 3.8vw, 16px) !important;
+    line-height: 1.65 !important;
+  }
+  .homeherocopy .homeactions {
+    gap: 12px;
+    margin-top: 22px !important;
+  }
+  .homeherocopy .button {
+    min-height: 46px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .homeherocopy h1 br { display: none; }
+  .homeherocopy .homeactions { align-items: stretch; }
+  .homeherocopy .homeactions .button { flex: 1 1 100%; }
+}
+
+/* Mobile layout corrections: restore readable card widths and prevent horizontal overflow. */
+@media (max-width: 760px) {
+  .wrap,
+  .services-overview > .wrap { width: calc(100% - 32px) !important; }
+
+  .homecards,
+  .projectcards,
+  .service-catalog-grid,
+  .project-gallery,
+  .contact-details-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+  }
+  .homecard,
+  .projectcard,
+  .service-catalog-card,
+  .portfolio-card,
+  .contact-detail-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+  }
+  .homecard .cardphoto { width: 100%; height: auto; aspect-ratio: 1.6; }
+  .homecard .cardphoto img { width: 100%; height: 100%; object-fit: cover; }
+  .homecard .serviceicon {
+    top: auto !important;
+    bottom: auto !important;
+    left: 14px !important;
+    transform: translateY(-50%);
+  }
+  .homecard .cardcopy { padding: 26px 16px 18px !important; }
+  .homecard .cardcopy h3,
+  .projectcard h3,
+  .service-catalog-copy h3,
+  .portfolio-copy h3 { overflow-wrap: anywhere; }
+  .homecard .cardcopy h3 { font-size: 17px !important; }
+  .homecard .cardcopy p { font-size: 14px !important; line-height: 1.55 !important; }
+
+  .projectcard > img { height: auto !important; aspect-ratio: 1.6; object-fit: cover; }
+  .projectcard h3 { min-height: 0; padding: 14px 16px; font-size: 17px; }
+  .service-catalog-photo { aspect-ratio: 1.45; }
+  .service-catalog-copy { padding: 18px 16px 20px; }
+  .service-catalog-copy h3 { font-size: 18px; }
+  .service-catalog-copy p,
+  .service-catalog-copy li { font-size: 14px; line-height: 1.5; }
+  .service-catalog-copy ul { padding-left: 20px; }
+  .portfolio-photo { aspect-ratio: 1.55; }
+  .portfolio-copy { min-height: 0; padding: 17px 16px 19px; }
+  .portfolio-copy p { font-size: 14px; }
+
+  .project-filters { justify-content: flex-start; gap: 8px; margin: 22px 0 25px; }
+  .filter-button { min-height: 42px; padding: 9px 13px; }
+  .contact-detail-card { padding: 20px; }
+  .contact-detail-card p { font-size: 15px; line-height: 1.6; overflow-wrap: anywhere; }
+  .contact-enquiry-grid,
+  .contactgrid,
+  .split { grid-template-columns: minmax(0, 1fr) !important; gap: 28px !important; }
+  .contact-form-row { grid-template-columns: minmax(0, 1fr) !important; gap: 0; }
+  .contactform,
+  .reference-contact-form { min-width: 0; }
+  .contactform input,
+  .contactform select,
+  .contactform textarea,
+  .reference-contact-form input,
+  .reference-contact-form select,
+  .reference-contact-form textarea { min-width: 0; max-width: 100%; font-size: 16px; }
+  .footergrid { grid-template-columns: minmax(0, 1fr) !important; gap: 26px !important; }
+  .footergrid > div { min-width: 0; }
+  .footergrid a,
+  .footergrid p { overflow-wrap: anywhere; }
+
+  .homeaboutgrid,
+  .benefitgrid,
+  .advantage-layout,
+  .chairman-grid,
+  .about-intro-grid,
+  .vision-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  .homeaboutgrid > img,
+  .miniphotos img { max-width: 100%; }
+  .benefitcards { grid-template-columns: minmax(0, 1fr) !important; }
+  .benefit { height: auto; min-height: 0; }
+
+  .services-page-hero,
+  .projects-page-hero,
+  .contact-page-hero,
+  .about-page-hero { height: clamp(190px, 42vw, 280px) !important; min-height: 0 !important; }
+  .services-page-hero h1,
+  .projects-page-hero h1,
+  .contact-page-hero h1,
+  .about-page-hero h1 { font-size: clamp(32px, 8vw, 44px); }
+}
+
+@media (max-width: 420px) {
+  .wrap,
+  .services-overview > .wrap { width: calc(100% - 28px) !important; }
+  .homecard .cardcopy h3,
+  .projectcard h3,
+  .service-catalog-copy h3 { font-size: 16px !important; }
+  .homecard .serviceicon { left: 12px !important; }
+  .contact-detail-card { padding: 18px; }
+  .contact-social a,
+  .social a { min-width: 42px; min-height: 42px; }
+  .homeactions .button { width: 100%; }
+}
+
+/* Touch screens get the same navy hover treatment as desktop while a card is pressed. */
+@media (hover: none), (pointer: coarse) {
+  .homecard:active,
+  .projectcard:active,
+  .service-catalog-card:active,
+  .servicefull:active,
+  .portfolio-card:active,
+  .advantage-card:active,
+  .contact-detail-card:active,
+  .benefit:active {
+    background: #123761 !important;
+    color: #fff !important;
+    transform: translateY(-3px) scale(.995);
+    box-shadow: 0 14px 28px rgb(16 45 75 / 22%);
+  }
+  .homecard:active h3,
+  .homecard:active p,
+  .projectcard:active h3,
+  .service-catalog-card:active h3,
+  .service-catalog-card:active p,
+  .service-catalog-card:active li,
+  .portfolio-card:active h3,
+  .portfolio-card:active p,
+  .portfolio-card:active strong,
+  .contact-detail-card:active h3,
+  .contact-detail-card:active p,
+  .benefit:active h3,
+  .benefit:active p { color: #fff !important; }
+  .homecard:active img,
+  .projectcard:active > img,
+  .service-catalog-card:active .service-catalog-photo > img,
+  .portfolio-card:active .portfolio-photo img { transform: scale(1.025); }
+  .button:active,
+  .navcta:active,
+  .filter-button:active,
+  .contact-social a:active,
+  .social a:active { transform: scale(.96); }
+}
+
+/* Slightly shorter hero image area; contain the source artwork so no screen size crops it. */
+@media (min-width: 761px) {
+  .homehero {
+    height: min(46vw, 760px, calc(100svh - 160px)) !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    background: #123963 !important;
+  }
+  .homeherobg {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    background: #123963 !important;
+  }
+}
+@media (max-width: 760px) {
+  .homehero { background: #123963 !important; }
+  .homeherobg {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1440 / 690 !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    background: #123963 !important;
+  }
+}
+
+/* Do not paint the space around the hero artwork; show only the image over the page canvas. */
+.homehero,
+.homeherobg { background-color: transparent !important; }
+@media (max-width: 760px) {
+  .homehero { background-color: transparent !important; }
+  .homeherobg { background-color: transparent !important; }
+}
+
+/* Final hero fit: scale the complete artwork to the available height, use white outside it, and keep copy over the image. */
+.homehero { background: #fff !important; }
+.homeherobg { background: #fff !important; }
+@media (min-width: 761px) {
+  .homeherocopy {
+    width: min(1240px, calc(100vw - 64px), calc(192svh - 307px)) !important;
+    margin-inline: auto !important;
+  }
+}
+@media (max-width: 760px) {
+  .homehero { background: #fff !important; }
+  .homeherobg { background: #fff !important; }
+}
+
+/* Contact detail cards: white at rest, navy on hover, keyboard focus, and touch selection. */
+.contact-detail-card,
+.contact-detail-card.featured {
+  background: #fff !important;
+  color: #163961 !important;
+  border-color: #d9e0e8 !important;
+  transition: color .22s ease, background-color .22s ease, border-color .22s ease,
+    box-shadow .22s ease, transform .22s ease;
+  cursor: pointer;
+}
+.contact-detail-card h3,
+.contact-detail-card.featured h3,
+.contact-detail-card p,
+.contact-detail-card.featured p,
+.contact-detail-card a { color: #4e5966 !important; transition: color .22s ease; }
+.contact-detail-card h3,
+.contact-detail-card.featured h3 { color: #163961 !important; }
+.contact-detail-card:hover,
+.contact-detail-card:focus,
+.contact-detail-card:focus-within,
+.contact-detail-card:active,
+.contact-detail-card.featured:hover,
+.contact-detail-card.featured:focus,
+.contact-detail-card.featured:focus-within,
+.contact-detail-card.featured:active {
+  background: #123761 !important;
+  color: #fff !important;
+  border-color: #123761 !important;
+  box-shadow: 0 14px 30px rgb(16 45 75 / 22%);
+  transform: translateY(-4px);
+  outline: none;
+}
+.contact-detail-card:hover h3,
+.contact-detail-card:hover p,
+.contact-detail-card:hover a,
+.contact-detail-card:focus h3,
+.contact-detail-card:focus p,
+.contact-detail-card:focus a,
+.contact-detail-card:focus-within h3,
+.contact-detail-card:focus-within p,
+.contact-detail-card:focus-within a,
+.contact-detail-card:active h3,
+.contact-detail-card:active p,
+.contact-detail-card:active a,
+.contact-detail-card.featured:hover h3,
+.contact-detail-card.featured:hover p,
+.contact-detail-card.featured:hover a,
+.contact-detail-card.featured:focus h3,
+.contact-detail-card.featured:focus p,
+.contact-detail-card.featured:focus a,
+.contact-detail-card.featured:focus-within h3,
+.contact-detail-card.featured:focus-within p,
+.contact-detail-card.featured:focus-within a,
+.contact-detail-card.featured:active h3,
+.contact-detail-card.featured:active p,
+.contact-detail-card.featured:active a { color: #fff !important; }
+.contact-detail-card:focus-visible { outline: 3px solid #78a4d0; outline-offset: 3px; }
+
+/* Footer CTA buttons follow the supplied reference and stay legible over the dark band. */
+.homecall .homeactions .homebutton {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: #173963 !important;
+  transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease, color .22s ease;
+}
+.homecall .homeactions .outlinebutton {
+  background: transparent !important;
+  border-color: #fff !important;
+  color: #fff !important;
+  transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease, color .22s ease;
+}
+.homecall .homeactions .homebutton:hover,
+.homecall .homeactions .homebutton:focus,
+.homecall .homeactions .outlinebutton:hover,
+.homecall .homeactions .outlinebutton:focus {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: #173963 !important;
+  box-shadow: 0 10px 24px rgb(4 24 49 / 28%);
+  transform: translateY(-3px);
+}
+@media (hover: none), (pointer: coarse) {
+  .homecall .homeactions .homebutton:active,
+  .homecall .homeactions .outlinebutton:active {
+    background: #fff !important;
+    border-color: #fff !important;
+    color: #173963 !important;
+    transform: scale(.97);
+  }
+}
+
+/* Home hero CTA buttons: outlined button turns white on hover/focus, matching the footer CTA. */
+.homehero .homeactions .homebutton {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: #173963 !important;
+}
+.homehero .homeactions .outlinebutton {
+  background: transparent !important;
+  border-color: #fff !important;
+  color: #fff !important;
+}
+.homehero .homeactions .homebutton:hover,
+.homehero .homeactions .homebutton:focus,
+.homehero .homeactions .outlinebutton:hover,
+.homehero .homeactions .outlinebutton:focus {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: #173963 !important;
+  box-shadow: 0 10px 24px rgb(4 24 49 / 28%);
+  transform: translateY(-3px);
+}
+@media (hover: none), (pointer: coarse) {
+  .homehero .homeactions .homebutton:active,
+  .homehero .homeactions .outlinebutton:active {
+    background: #fff !important;
+    border-color: #fff !important;
+    color: #173963 !important;
+    transform: scale(.97);
+  }
+}
+
+/* Keep Home's complete hero artwork, headline and CTAs inside the first viewport. */
+@media (min-width: 761px) {
+  .homehero {
+    height: calc(100svh - 170px) !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    overflow: hidden;
+  }
+  .homeherobg { object-fit: contain !important; }
+}
+@media (max-width: 760px) {
+  .homehero {
+    height: calc(100svh - 124px) !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden;
+  }
+  .homeherobg {
+    position: relative !important;
+    inset: auto !important;
+    flex: 0 0 auto;
+    width: 100% !important;
+    height: clamp(128px, 25svh, 230px) !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+  .homeherocopy {
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: clamp(10px, 2svh, 20px) 20px clamp(10px, 2svh, 18px) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .homeherocopy h1 {
+    font-size: clamp(22px, 6.8vw, 32px) !important;
+    line-height: 1.08 !important;
+    margin: 0 0 10px !important;
+  }
+  .homeherocopy p {
+    font-size: clamp(12px, 3.5vw, 14px) !important;
+    line-height: 1.45 !important;
+    margin: 0;
+  }
+  .homeherocopy .homeactions {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: row !important;
+    gap: 8px !important;
+    margin-top: clamp(10px, 2svh, 18px) !important;
+  }
+  .homeherocopy .homeactions .button {
+    flex: 1 1 0;
+    width: auto !important;
+    min-width: 0;
+    min-height: 40px;
+    padding: 8px 6px !important;
+    font-size: clamp(10px, 2.8vw, 12px) !important;
+    white-space: nowrap;
+    text-align: center;
+  }
+}
+@media (max-width: 760px) and (max-height: 600px) {
+  .homehero {
+    display: grid !important;
+    grid-template-columns: 43% minmax(0, 57%);
+    flex-direction: initial !important;
+  }
+  .homeherobg {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+  .homeherocopy {
+    padding: 10px 12px !important;
+  }
+  .homeherocopy h1 { font-size: clamp(18px, 4.6vw, 25px) !important; margin-bottom: 8px !important; }
+  .homeherocopy p { font-size: clamp(10px, 2.5vw, 12px) !important; line-height: 1.35 !important; }
+  .homeherocopy .homeactions { gap: 6px !important; margin-top: 10px !important; }
+  .homeherocopy .homeactions .button { font-size: clamp(9px, 2vw, 11px) !important; min-height: 36px; }
+}
+@media (min-width: 761px) and (max-height: 620px) {
+  .homeherocopy h1 { font-size: clamp(28px, 3.4vw, 40px) !important; margin-bottom: 14px !important; }
+  .homeherocopy p { font-size: 13px !important; line-height: 1.45 !important; }
+  .homeherocopy .homeactions { margin-top: 18px !important; }
+  .homeherocopy .homeactions .button { min-height: 42px; padding-block: 9px; }
+}
+
+
+/* FINAL HERO FIX — desktop */
+@media screen and (min-width: 621px) {
+  body .homehero {
+    position: relative !important;
+    width: 100% !important;
+    height: calc(100svh - 146px) !important;
+    min-height: 540px !important;
+    max-height: 680px !important;
+    aspect-ratio: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #123963 !important;
+  }
+
+  body .homehero .homeherobg {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: fill !important;
+    object-position: center !important;
+    transform: none !important;
+    animation: none !important;
+    z-index: 0 !important;
+  }
+
+  body .homehero::before {
+    display: block !important;
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    background: linear-gradient(
+      90deg,
+      rgba(10, 39, 77, 0.88) 0%,
+      rgba(13, 44, 83, 0.62) 43%,
+      rgba(15, 47, 88, 0.12) 72%,
+      transparent 100%
+    ) !important;
+  }
+
+  body .homehero::after {
+    display: none !important;
+  }
+
+  body .homehero .homeherocopy {
+    position: relative !important;
+    z-index: 2 !important;
+    width: min(1240px, calc(100% - 64px)) !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 24px 10px !important;
+    transform: none !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  body .homehero .homeherocopy h1 {
+    max-width: 590px !important;
+    font-size: clamp(36px, 3.2vw, 46px) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.7px !important;
+    margin: 0 0 24px !important;
+    color: #fff !important;
+  }
+
+  body .homehero .homeherocopy p {
+    max-width: 540px !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+    color: #fff !important;
+  }
+
+  body .homehero .homeherocopy .homeactions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+    margin-top: 30px !important;
+  }
+}
+
+/* MOBILE + TABLET HERO FIX */
+@media screen and (max-width: 620px) {
+  body .homehero {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-end !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    background: #123963 !important;
+  }
+
+  body .homehero .homeherobg {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: 66% center !important;
+    z-index: 0 !important;
+  }
+
+  body .homehero::before {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background: linear-gradient(
+      180deg,
+      rgba(10, 39, 77, 0.05) 0%,
+      rgba(10, 39, 77, 0.35) 30%,
+      rgba(10, 39, 77, 0.96) 56%,
+      #123963 100%
+    ) !important;
+    pointer-events: none !important;
+  }
+
+  body .homehero .homeherocopy {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 270px 22px 32px !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: #fff !important;
+  }
+
+  body .homehero .homeherocopy h1 {
+    max-width: 100% !important;
+    margin: 0 0 18px !important;
+    font-size: clamp(28px, 7.5vw, 36px) !important;
+    line-height: 1.16 !important;
+    letter-spacing: -0.5px !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    color: #fff !important;
+  }
+
+  body .homehero .homeherocopy p {
+    max-width: 100% !important;
+    margin: 0 !important;
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    overflow-wrap: break-word !important;
+    color: #fff !important;
+  }
+
+  body .homehero .homeherocopy .homeactions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    margin-top: 24px !important;
+  }
+
+  body .homehero .homeherocopy .homeactions .button {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 46px !important;
+    box-sizing: border-box !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+}
+
+/* TABLET HERO */
+@media screen and (min-width: 621px) and (max-width: 1024px) {
+  body .homehero {
+    height: calc(100svh - 120px) !important;
+    min-height: 560px !important;
+    max-height: 720px !important;
+    overflow: hidden !important;
+  }
+
+  body .homehero .homeherobg {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: 65% center !important;
+  }
+
+  body .homehero .homeherocopy {
+    width: calc(100% - 48px) !important;
+    padding: 24px 0 !important;
+  }
+
+  body .homehero .homeherocopy h1 {
+    max-width: 500px !important;
+    font-size: clamp(34px, 4.5vw, 44px) !important;
+    line-height: 1.16 !important;
+  }
+
+  body .homehero .homeherocopy p {
+    max-width: 440px !important;
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+  }
+}
+
+/* MOBILE HERO — compact image with readable text */
+@media screen and (max-width: 620px) {
+  body .homehero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #123963 !important;
+  }
+
+  /* Smaller image at the top */
+  body .homehero .homeherobg {
+    position: relative !important;
+    inset: auto !important;
+    display: block !important;
+    width: 100% !important;
+    height: 190px !important;
+    min-height: 190px !important;
+    max-height: 190px !important;
+    object-fit: cover !important;
+    object-position: center 40% !important;
+    flex: 0 0 190px !important;
+    transform: none !important;
+  }
+
+  /* Remove the desktop overlay */
+  body .homehero::before {
+    display: none !important;
+    content: none !important;
+  }
+
+  body .homehero::after {
+    display: none !important;
+  }
+
+  /* Text below the image */
+  body .homehero .homeherocopy {
+    position: relative !important;
+    z-index: 2 !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 24px 20px 28px !important;
+    box-sizing: border-box !important;
+    background: #123963 !important;
+    color: #fff !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  body .homehero .homeherocopy h1 {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 16px !important;
+    font-size: 29px !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.4px !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    white-space: normal !important;
+    color: #fff !important;
+  }
+
+  body .homehero .homeherocopy p {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    color: #fff !important;
+  }
+
+  body .homehero .homeactions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin-top: 22px !important;
+  }
+
+  body .homehero .homeactions .button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    min-height: 46px !important;
+    padding: 12px 16px !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+}
+
+/* Extra-small phones */
+@media screen and (max-width: 380px) {
+  body .homehero .homeherobg {
+    height: 165px !important;
+    min-height: 165px !important;
+    max-height: 165px !important;
+    flex-basis: 165px !important;
+  }
+
+  body .homehero .homeherocopy {
+    padding: 20px 16px 24px !important;
+  }
+
+  body .homehero .homeherocopy h1 {
+    font-size: 26px !important;
+  }
+}
+
+/* MOBILE HERO: fit the complete hero within the first viewport */
+@media screen and (max-width: 620px) {
+  body .homehero {
+    height: calc(100vh - 105px) !important;
+    height: calc(100svh - 105px) !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Compact hero image */
+  body .homehero .homeherobg {
+    position: relative !important;
+    inset: auto !important;
+    display: block !important;
+    width: 100% !important;
+    height: clamp(125px, 22svh, 175px) !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    flex: 0 0 clamp(125px, 22svh, 175px) !important;
+    object-fit: cover !important;
+    object-position: center 40% !important;
+  }
+
+  body .homehero::before,
+  body .homehero::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  /* Use remaining hero height for the text and buttons */
+  body .homehero .homeherocopy {
+    position: relative !important;
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: clamp(14px, 3vh, 24px) 18px 18px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    background: #123963 !important;
+    color: #fff !important;
+  }
+
+  body .homehero .homeherocopy h1 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 12px !important;
+    font-size: clamp(23px, 6.5vw, 29px) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.4px !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    color: #fff !important;
+  }
+
+  body .homehero .homeherocopy p {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    font-size: clamp(12px, 3.5vw, 14px) !important;
+    line-height: 1.45 !important;
+    color: #fff !important;
+  }
+
+  body .homehero .homeactions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-top: 16px !important;
+  }
+
+  body .homehero .homeactions .button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    min-height: 40px !important;
+    padding: 9px 12px !important;
+    box-sizing: border-box !important;
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+  }
+}
+
+/* Short mobile screens */
+@media screen and (max-width: 620px) and (max-height: 700px) {
+  body .homehero .homeherobg {
+    height: 115px !important;
+    flex-basis: 115px !important;
+  }
+
+  body .homehero .homeherocopy {
+    padding: 10px 16px !important;
+  }
+
+  body .homehero .homeherocopy h1 {
+    font-size: 23px !important;
+    margin-bottom: 8px !important;
+  }
+
+  body .homehero .homeherocopy p {
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+  }
+
+  body .homehero .homeactions {
+    margin-top: 10px !important;
+    gap: 6px !important;
+  }
+
+  body .homehero .homeactions .button {
+    min-height: 34px !important;
+    padding: 6px 10px !important;
+  }
+}
+
+/* MOBILE HERO — remove excess blue space */
+@media screen and (max-width: 620px) {
+  body .homehero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #123963 !important;
+  }
+
+  body .homehero .homeherobg {
+    position: relative !important;
+    inset: auto !important;
+    display: block !important;
+    width: 100% !important;
+    height: clamp(130px, 22svh, 175px) !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    flex: 0 0 clamp(130px, 22svh, 175px) !important;
+    object-fit: cover !important;
+    object-position: center 40% !important;
+  }
+
+  body .homehero::before,
+  body .homehero::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  body .homehero .homeherocopy {
+    position: relative !important;
+    display: block !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 20px 18px 22px !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+    background: #123963 !important;
+    color: #fff !important;
+  }
+
+  body .homehero .homeherocopy h1 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 12px !important;
+    font-size: clamp(24px, 6.5vw, 29px) !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.4px !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    color: #fff !important;
+  }
+
+  body .homehero .homeherocopy p {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    color: #fff !important;
+  }
+
+  body .homehero .homeactions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-top: 16px !important;
+  }
+
+  body .homehero .homeactions .button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    min-height: 40px !important;
+    padding: 10px 12px !important;
+    box-sizing: border-box !important;
+    font-size: 13px !important;
+    text-align: center !important;
+  }
+}
+
+
+/* ==========================================
+   MOBILE HERO — RESPONSIVE LAYOUT FIX
+   ========================================== */
+
+@media screen and (max-width: 620px) {
+
+  /* Keep the hero content in one column */
+  .homehero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    background: #153b64 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Compact image at the top */
+  .homehero .homeherobg {
+    position: relative !important;
+    inset: auto !important;
+    display: block !important;
+    width: 100% !important;
+    height: 190px !important;
+    min-height: 190px !important;
+    max-height: 190px !important;
+    flex: 0 0 190px !important;
+    object-fit: cover !important;
+    object-position: center 38% !important;
+  }
+
+  /* Remove overlays that cause layout conflicts */
+  .homehero::before,
+  .homehero::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  /* Full-width text container */
+  .homehero .homeherocopy {
+    position: relative !important;
+    inset: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    flex: 0 0 auto !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 24px 20px 26px !important;
+    box-sizing: border-box !important;
+    background: #153b64 !important;
+    color: #fff !important;
+    overflow: visible !important;
+  }
+
+  /* Heading */
+  .homehero .homeherocopy h1 {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 14px !important;
+    font-size: clamp(27px, 7.2vw, 32px) !important;
+    line-height: 1.17 !important;
+    letter-spacing: -0.6px !important;
+    font-weight: 750 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    color: #fff !important;
+  }
+
+  /* Description */
+  .homehero .homeherocopy p {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 20px !important;
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    overflow-wrap: break-word !important;
+    color: rgba(255, 255, 255, 0.92) !important;
+  }
+
+  /* Stack buttons without horizontal overflow */
+  .homehero .homeactions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+
+  .homehero .homeactions a,
+  .homehero .homeactions button,
+  .homehero .homeactions .button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 46px !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 12px 14px !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    text-align: center !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
+}
+
+/* Smaller phones */
+@media screen and (max-width: 380px) {
+  .homehero .homeherobg {
+    height: 165px !important;
+    min-height: 165px !important;
+    max-height: 165px !important;
+    flex-basis: 165px !important;
+  }
+
+  .homehero .homeherocopy {
+    padding: 20px 16px 22px !important;
+  }
+
+  .homehero .homeherocopy h1 {
+    font-size: 26px !important;
+  }
+}
+

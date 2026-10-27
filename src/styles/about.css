@@ -1,0 +1,933 @@
+.about-page-hero{height:400px;position:relative;display:flex;align-items:center;overflow:hidden;color:#fff;background:#15385f url('/assets/about-hero.png') center/cover no-repeat;animation:aboutHeroDrift 17s ease-in-out infinite alternate}
+.about-page-hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,42,80,.08),transparent 68%);pointer-events:none}
+.about-page-hero .wrap{position:relative;z-index:1}
+.about-page-hero h1{font-size:46px;line-height:1.15;color:#fff;margin:0;text-shadow:0 3px 14px #10274732}
+.about-introduction{background:#fff;padding:52px 0 58px}
+.about-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+.about-photo-collage{display:grid;grid-template-columns:1.15fr 1fr;grid-template-rows:repeat(3,1fr);gap:10px;height:510px;min-width:0}
+.about-photo-collage img,.vision-collage img{display:block;width:100%;height:100%;object-fit:contain;min-width:0;background:transparent}
+.about-photo-collage .collage-main{grid-row:span 3}
+.about-intro-copy .eyebrow{margin-bottom:12px}
+.about-intro-copy h2,.chairman-copy h2,.vision-copy h2{color:#173a68;font-size:25px;line-height:1.25;margin:0 0 20px}
+.about-intro-copy p,.chairman-copy p,.vision-copy p{color:#515c68;font-size:14px;line-height:1.55;margin:0 0 12px}
+.chairman-message{position:relative;overflow:hidden;background:#e9edf2;padding:58px 0}
+.chairman-message:before{content:'';position:absolute;inset:0;background:url('/assets/Rectangle 53.png') center/cover no-repeat;opacity:.72;pointer-events:none}
+.chairman-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.chairman-copy .eyebrow{margin-bottom:12px}
+.chairman-copy h2{font-size:25px;margin-bottom:24px}
+.chairman-copy strong{display:block;color:#173a68;font-size:14px;letter-spacing:.25px;margin-top:24px}
+.chairman-role{display:block;color:#697685;font-size:13px;margin-top:7px}
+.chairman-art{max-width:590px;justify-self:center}
+.chairman-art img{display:block;width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 5px 4px #18324a1a)}
+.about-advantages{background:#fff;padding:54px 0 58px}
+.about-advantages h2{text-align:center;color:#173a68;font-size:25px;margin:0 0 34px}
+.advantage-layout{display:grid;grid-template-columns:minmax(0,1fr) 190px minmax(0,1fr);gap:24px;align-items:center}
+.advantage-column{display:grid;gap:18px}
+.advantage-card{min-height:94px;display:flex;align-items:center;gap:15px;padding:14px 16px;border:1px solid #8da1b7;border-radius:5px;background:#eef2f5;box-shadow:0 2px 4px #102d4b10;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.advantage-card>span,.commitment-items article>span{width:40px;height:40px;flex:none;border-radius:4px;background:#123761;display:grid;place-items:center}
+.advantage-card img,.commitment-items img{width:22px;height:22px;object-fit:contain}
+.advantage-card h3{font-size:14px;color:#173a68;margin:0 0 5px}
+.advantage-card p{font-size:12px;line-height:1.35;color:#506071;margin:0}
+.value-diagram{height:195px;position:relative;display:grid;place-items:center;color:#23668c;font-size:11px;text-align:center}
+.value-diagram>b{position:absolute;font-size:10px;color:#1c5a7d}
+.about-vision{position:relative;overflow:hidden;color:#fff;background:#173a68;padding:58px 0 62px}
+.about-vision:before{content:'';position:absolute;inset:0;background:url('/assets/Rectangle 78.png') center/cover no-repeat;opacity:.22;mix-blend-mode:screen;pointer-events:none}
+.vision-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+.vision-collage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1.05fr .92fr;gap:12px;min-height:480px}
+.vision-collage .vision-main{grid-column:span 2}
+.vision-copy .eyebrow{color:#fff;margin-bottom:10px}
+.vision-copy h2{color:#fff;font-size:25px;margin-bottom:22px}
+.vision-copy p{color:#f1f4f8;font-size:13px;line-height:1.48;margin-bottom:12px}
+.about-commitment{background:#fff;padding:40px 0 44px}
+.commitment-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}
+.commitment-grid h2{color:#173a68;font-size:21px;margin:0 0 16px}
+.commitment-grid>div:first-child p{font-size:13px;line-height:1.5;color:#515c68;max-width:470px;margin:0}
+.commitment-items{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #8da1b7;border-radius:5px;overflow:hidden}
+.commitment-items article{display:flex;align-items:center;gap:10px;padding:12px;border-right:1px solid #d5dce4}
+.commitment-items article:last-child{border-right:0}
+.commitment-items h3{font-size:12px;line-height:1.25;color:#173a68;margin:0}
+.chairman-art{position:relative}
+.chairman-art:after{content:'”';position:absolute;right:28px;top:14px;color:#cbd1da;font-size:58px;line-height:1;font-weight:700;pointer-events:none}
+.value-diagram{width:240px;height:240px;display:grid;place-items:center;position:relative}
+.value-diagram-image{display:block;width:100%;height:100%;object-fit:contain}
+.advantage-layout{grid-template-columns:minmax(0,1fr) 190px minmax(0,1fr);gap:24px}
+.value-diagram{width:190px;height:190px;max-width:100%;justify-self:center}
+.value-diagram-image{width:100%;height:100%;object-fit:contain}
+.chairman-copy .eyebrow{letter-spacing:.15px}
+.chairman-copy strong{font-size:15px}
+.chairman-role{font-size:14px}
+.chairman-art{animation:chairmanFloat 5.2s ease-in-out infinite alternate}
+@media (min-width: 901px){.chairman-message{ padding: 104px 0 88px; }}
+@media (min-width: 901px){.chairman-grid{
+    width: min(1630px, calc(100% - 100px));
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+    gap: 58px;
+  }}
+@media (min-width: 901px){.chairman-copy .eyebrow{ color: #12345f; font-size: 16px; font-weight: 700; margin-bottom: 14px; }}
+@media (min-width: 901px){.chairman-copy h2{ color: #12345f; font-size: clamp(30px, 2.2vw, 42px); font-weight: 500; line-height: 1.25; margin-bottom: 48px; }}
+@media (min-width: 901px){.chairman-copy p{ color: #12345f; font-size: clamp(18px, 1.3vw, 24px); line-height: 1.48; margin-bottom: 18px; }}
+@media (min-width: 901px){.chairman-copy strong{ color: #12345f; font-size: 23px; font-weight: 500; margin-top: 48px; }}
+@media (min-width: 901px){.chairman-role{ color: #12345f; font-size: 21px; margin-top: 8px; }}
+@media (min-width: 901px){.chairman-art{ max-width: 735px; aspect-ratio: 1.46; }}
+@media (min-width: 901px){.chairman-art:after{ right: 20px; top: 18px; font-size: 92px; }}
+@media (max-width: 900px){.chairman-copy p{ color: #12345f; }}
+.chairman-art{ animation: none !important; transform: translateY(3px); }
+@media (max-width: 900px){.chairman-art{ transform: none; }}
+.chairman-art{
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 735px;
+  aspect-ratio: 1.46;
+  margin-inline: auto;
+}
+.chairman-art-back{
+  position: absolute;
+  inset: 0 20px 20px 0;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 5px 12px rgb(0 0 0 / 14%);
+}
+.chairman-art-panel{
+  position: absolute;
+  inset: 18px 0 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7%;
+  background: #15365f;
+  border-radius: 4px;
+}
+.chairman-logo-card{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 14px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 10%);
+}
+.chairman-logo-card img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  filter: none;
+}
+.chairman-quote{
+  position: absolute;
+  z-index: 2;
+  top: 7px;
+  right: 20px;
+  color: #c5cfdd;
+  font-family: Georgia, serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+}
+@media (max-width: 620px){.chairman-art{
+    aspect-ratio: 1.2;
+  }}
+@media (max-width: 620px){.chairman-art-back{
+    inset: 0 12px 12px 0;
+  }}
+@media (max-width: 620px){.chairman-art-panel{
+    inset: 12px 0 0 12px;
+    padding: 7%;
+  }}
+@media (max-width: 620px){.chairman-logo-card{
+    padding: 10px;
+  }}
+@media (max-width: 620px){.chairman-quote{
+    top: 5px;
+    right: 12px;
+    font-size: 42px;
+  }}
+.ut-chairman-frame{
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 735px;
+  aspect-ratio: 1.46;
+  margin-inline: auto;
+}
+.ut-chairman-backdrop{
+  position: absolute;
+  inset: 0 18px 18px 0;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 5px 12px rgb(0 0 0 / 14%);
+}
+.ut-chairman-panel{
+  position: absolute;
+  inset: 18px 0 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7%;
+  background: #15365f;
+  border-radius: 4px;
+}
+.ut-chairman-logo-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: 14px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 10%);
+}
+.ut-chairman-logo-card img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.ut-chairman-quote{
+  position: absolute;
+  top: 7px;
+  right: 20px;
+  z-index: 1;
+  color: #c5cfdd;
+  font-family: Georgia, serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+}
+@media (max-width: 620px){.ut-chairman-frame{
+    aspect-ratio: 1.2;
+  }}
+@media (max-width: 620px){.ut-chairman-backdrop{
+    inset: 0 12px 12px 0;
+  }}
+@media (max-width: 620px){.ut-chairman-panel{
+    inset: 12px 0 0 12px;
+    padding: 7%;
+  }}
+@media (max-width: 620px){.ut-chairman-logo-card{
+    padding: 10px;
+  }}
+@media (max-width: 620px){.ut-chairman-quote{
+    top: 5px;
+    right: 12px;
+    font-size: 42px;
+  }}
+@media (prefers-reduced-motion: reduce){.ut-chairman-frame,
+  .ut-chairman-panel,
+  .ut-chairman-logo-card{
+    animation: none;
+    transition: none;
+  }}
+.ut-chairman-frame{
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 735px;
+  aspect-ratio: 1.46;
+  margin-inline: auto;
+}
+.ut-chairman-blue-back{
+  position: absolute;
+  z-index: 0;
+  top: 32px;
+  right: 0;
+  bottom: 0;
+  left: 30px;
+  background: #10335f;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 18%);
+}
+.ut-chairman-white-card{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 20px;
+  bottom: 20px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 28px 40px;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 5px 13px rgb(0 0 0 / 17%);
+}
+.ut-chairman-white-card img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.ut-chairman-quote{
+  position: absolute;
+  top: 19px;
+  right: 20px;
+  z-index: 2;
+  color: #c4cdd9;
+  font-family: Georgia, serif;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 0.85;
+  pointer-events: none;
+}
+@media (max-width: 900px){.ut-chairman-frame{
+    max-width: 650px;
+  }}
+@media (max-width: 900px){.ut-chairman-white-card{
+    padding: 25px 32px;
+  }}
+@media (max-width: 900px){.ut-chairman-quote{
+    font-size: 78px;
+  }}
+@media (max-width: 620px){.ut-chairman-frame{
+    aspect-ratio: 1.3;
+  }}
+@media (max-width: 620px){.ut-chairman-blue-back{
+    top: 20px;
+    left: 18px;
+  }}
+@media (max-width: 620px){.ut-chairman-white-card{
+    right: 12px;
+    bottom: 12px;
+    padding: 24px 16px 16px;
+  }}
+@media (max-width: 620px){.ut-chairman-quote{
+    top: 10px;
+    right: 12px;
+    font-size: 52px;
+  }}
+
+/* =========================================
+   ABOUT PAGE — MOBILE RESPONSIVE FIX
+   ========================================= */
+
+@media (max-width: 620px) {
+
+  /* Prevent horizontal scrolling */
+  body {
+    overflow-x: hidden;
+  }
+
+  .homeabout,
+  .homeaboutgrid,
+  .aboutsection,
+  .aboutgrid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  /* Stack About content vertically */
+  .homeaboutgrid,
+  .aboutgrid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 24px !important;
+  }
+
+  /* Commitment heading and description */
+  .homeabout h2,
+  .aboutsection h2,
+  .aboutgrid h2 {
+    font-size: 25px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 14px !important;
+  }
+
+  .homeabout p,
+  .aboutsection p,
+  .aboutgrid p {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    overflow-wrap: break-word;
+  }
+
+  /* Make commitment and feature cards full width */
+  .homeaboutgrid > *,
+  .aboutgrid > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Service/benefit cards */
+  .homebenefits,
+  .homebenefitsgrid,
+  .benefitsgrid,
+  .featurecards {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .homebenefits > *,
+  .homebenefitsgrid > *,
+  .benefitsgrid > *,
+  .featurecards > * {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Avoid a blank strip under the navbar if caused
+     by an empty pseudo-element or reserved spacer */
+  .aboutpage::before,
+  .aboutpage::after {
+    pointer-events: none;
+  }
+
+  /* Footer fits mobile width */
+  footer,
+  .homefooter,
+  .footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden;
+  }
+
+  .homefooter .footergrid,
+  .footer .footergrid,
+  .footergrid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 22px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .homefooter > *,
+  .footer > * {
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .footer img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ==========================================
+   ABOUT PAGE — MOBILE LAYOUT CORRECTION
+   ========================================== */
+
+@media screen and (max-width: 620px) {
+
+  /* Prevent horizontal overflow */
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  /* About page main sections */
+  .aboutpage,
+  .about-page,
+  .homeabout,
+  .homeaboutgrid,
+  .aboutsection,
+  .aboutgrid {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Main commitment layout: stack columns */
+  .homeaboutgrid,
+  .aboutgrid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 24px !important;
+    padding: 28px 20px !important;
+  }
+
+  /* Each column occupies the full available width */
+  .homeaboutgrid > *,
+  .aboutgrid > *,
+  .homeaboutgrid > div,
+  .aboutgrid > div {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Commitment text */
+  .homeabout h2,
+  .aboutsection h2,
+  .aboutgrid h2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 25px !important;
+    line-height: 1.3 !important;
+    text-align: left !important;
+    margin: 0 0 14px !important;
+  }
+
+  .homeabout p,
+  .aboutsection p,
+  .aboutgrid p {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    text-align: left !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  /* Feature cards must not sit beside the paragraph */
+  .homebenefits,
+  .homebenefitsgrid,
+  .benefitsgrid,
+  .featurecards {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 12px !important;
+    margin: 0 auto !important;
+  }
+
+  .homebenefits > *,
+  .homebenefitsgrid > *,
+  .benefitsgrid > *,
+  .featurecards > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Footer: full-width, centred layout */
+  footer,
+  .footer,
+  .homefooter {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 26px 20px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .footergrid,
+  .homefooter .footergrid,
+  .footer .footergrid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 22px !important;
+    margin: 0 auto !important;
+  }
+
+  .footergrid > *,
+  .footer .footergrid > *,
+  .homefooter .footergrid > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Social icons wrap rather than overflow */
+  .footer .sociallinks,
+  .homefooter .sociallinks,
+  .sociallinks {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    max-width: 100% !important;
+  }
+
+  /* Images stay inside their containers */
+  .footer img,
+  .homefooter img {
+    max-width: 100% !important;
+    height: auto;
+  }
+}
+
+
+/* ==========================================
+   ABOUT PAGE — RESPONSIVE LAYOUT FIX
+   ========================================== */
+
+.about-introduction,
+.chairman-message,
+.about-advantages,
+.about-vision,
+.about-commitment {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.about-introduction .wrap,
+.chairman-message .wrap,
+.about-advantages .wrap,
+.about-vision .wrap,
+.about-commitment .wrap {
+  width: min(100% - 40px, 1200px);
+  max-width: 1200px;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+.about-intro-grid,
+.chairman-grid,
+.vision-grid {
+  min-width: 0;
+}
+
+.about-intro-grid > *,
+.chairman-grid > *,
+.vision-grid > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.about-photo-collage img,
+.vision-collage img {
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* Commitment section: desktop layout */
+.commitment-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 32px;
+  min-width: 0;
+}
+
+.commitment-grid > div {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.commitment-items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.commitment-items article {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.commitment-items article > span {
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+}
+
+.commitment-items h3 {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Tablet */
+@media (min-width: 621px) and (max-width: 900px) {
+  .about-introduction,
+  .chairman-message,
+  .about-advantages,
+  .about-vision,
+  .about-commitment {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .about-intro-grid,
+  .chairman-grid,
+  .vision-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .about-photo-collage {
+    width: 100%;
+    height: clamp(300px, 55vw, 440px);
+  }
+
+  .ut-chairman-frame {
+    width: 100%;
+    max-width: 560px;
+  }
+
+  .advantage-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(130px, 180px);
+    gap: 18px;
+  }
+
+  .value-diagram {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    width: 170px;
+    height: 170px;
+  }
+
+  .advantage-column {
+    gap: 12px;
+  }
+
+  .advantage-card {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .commitment-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .commitment-items article {
+    padding: 12px 10px;
+  }
+}
+
+/* Mobile portrait and small screens */
+@media (max-width: 620px) {
+  .about-introduction,
+  .chairman-message,
+  .about-advantages,
+  .about-vision,
+  .about-commitment {
+    padding: 32px 0;
+  }
+
+  .about-introduction .wrap,
+  .chairman-message .wrap,
+  .about-advantages .wrap,
+  .about-vision .wrap,
+  .about-commitment .wrap {
+    width: calc(100% - 32px);
+    max-width: 100%;
+  }
+
+  /* Stack all main content without overflow */
+  .about-intro-grid,
+  .chairman-grid,
+  .vision-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    width: 100%;
+  }
+
+  .about-intro-copy,
+  .chairman-copy,
+  .vision-copy {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .about-intro-copy h2,
+  .chairman-copy h2,
+  .vision-copy h2 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+
+  .about-intro-copy p,
+  .chairman-copy p,
+  .vision-copy p {
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+  }
+
+  /* Collages: fit the screen */
+  .about-photo-collage {
+    height: clamp(250px, 75vw, 340px);
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .vision-collage {
+    min-height: 0;
+    height: 280px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 1.1fr 0.9fr;
+    gap: 8px;
+  }
+
+  /* Chairman image */
+  .ut-chairman-frame {
+    width: 100%;
+    max-width: 440px;
+    aspect-ratio: 1.3;
+  }
+
+  /* Advantages */
+  .about-advantages h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .advantage-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .value-diagram {
+    order: -1;
+    width: min(190px, 65vw);
+    height: auto;
+    aspect-ratio: 1;
+    margin-inline: auto;
+  }
+
+  .advantage-column {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .advantage-card {
+    width: 100%;
+    min-width: 0;
+    padding: 14px;
+    gap: 12px;
+    box-sizing: border-box;
+  }
+
+  .advantage-card h3 {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .advantage-card p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* Commitment: heading, paragraph, then cards */
+  .commitment-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+    width: 100%;
+  }
+
+  .commitment-grid h2 {
+    font-size: 23px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .commitment-grid > div:first-child p {
+    width: 100%;
+    max-width: none;
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+  }
+
+  .commitment-items {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .commitment-items article {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    min-width: 0;
+    padding: 14px;
+    border-right: 0;
+    border-bottom: 1px solid #d5dce4;
+    box-sizing: border-box;
+  }
+
+  .commitment-items article:last-child {
+    border-bottom: 0;
+  }
+
+  .commitment-items article > span {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .commitment-items h3 {
+    font-size: 14px;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 380px) {
+  .about-introduction .wrap,
+  .chairman-message .wrap,
+  .about-advantages .wrap,
+  .about-vision .wrap,
+  .about-commitment .wrap {
+    width: calc(100% - 24px);
+  }
+
+  .about-intro-copy h2,
+  .chairman-copy h2,
+  .vision-copy h2 {
+    font-size: 22px;
+  }
+
+  .commitment-items article {
+    padding: 12px;
+  }
+}

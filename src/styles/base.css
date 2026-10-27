@@ -1,0 +1,891 @@
+:root{font-family:'Poppins',sans-serif;color:#12325d;background:#fff;font-synthesis:none;text-rendering:optimizeLegibility;--navy:#0d2e58;--blue:#123a6c;--ink:#173660;--muted:#535c66;--pale:#f3f6f8;--line:#dce2e8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+.outlinebutton{background:transparent;color:#fff;border-color:#fff}
+.centerheading{text-align:center}
+.centerheading h2{margin:0 0 31px;font-size:30px}
+.centerheading p{font-size:13px;line-height:1.6;color:#535b65;margin:0 auto 40px;max-width:1000px}
+.cardphoto{height:220px;flex:none;overflow:hidden}
+.cardphoto img{width:100%;height:100%;object-fit:cover;display:block}
+.cardcopy{padding:16px 18px 20px}
+.cardcopy p{font-size:13px;line-height:1.55;color:#414a55;margin:0;padding-left:12px;position:relative}
+.cardcopy p:before{content:'•';position:absolute;left:0;top:0}
+.card-2{background:#113662}
+.card-2 .cardcopy h3,.card-2 .cardcopy p{color:#fff}
+.centerbutton{display:flex;width:max-content;margin:36px auto 0;min-height:46px;padding:11px 20px}
+.benefitgrid{position:relative;display:grid;grid-template-columns:.94fr 1.06fr;gap:46px;align-items:center}
+.benefitintro h2{font-size:29px;line-height:1.35;margin:0 0 27px;max-width:520px}
+.benefitintro>p{font-size:14px;line-height:1.65;color:#47515d;margin:0 0 35px;max-width:555px}
+.miniphotos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.miniphotos img{width:100%;height:200px;object-fit:cover;border-radius:4px}
+.benefitcards{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.benefit{height:220px;border:1px solid #c7d0d9;border-radius:4px;background:#fff;padding:30px 24px;box-shadow:0 3px 7px #12345618}
+.benefit h3{font-weight:600;font-size:18px;color:#173960;margin:0 0 13px}
+.benefit p{color:#4d5864;font-size:13px;line-height:1.55;margin:0}
+.benefit.darkbenefit{background:#123761;color:white}
+.benefit.darkbenefit h3,.benefit.darkbenefit p{color:white}
+.crumb{display:flex;gap:10px;font-size:12px;margin-top:34px;color:#dae5f2}
+.num{position:absolute;right:28px;top:272px;color:#9aabba;font-size:13px}
+.formnote{display:block;margin-top:13px;color:#758396;font-size:11px}
+@media(max-width:900px){.wrap{width:calc(100% - 44px)}.homehero{height:630px}.homeherocopy h1{font-size:42px}.homecards,.projectcards{grid-template-columns:repeat(2,1fr);gap:14px}.homecard{min-height:420px}.cardphoto{height:220px}.serviceicon{top:202px}.benefitgrid{grid-template-columns:1fr;gap:34px}.benefitintro{max-width:640px}.miniphotos img{height:210px}.benefit{height:180px}.footergrid{grid-template-columns:repeat(2,1fr);gap:36px}.nav{gap:17px}.navrow{gap:20px}.brand img{width:50px}.brand b{font-size:18px}.homecallinner{grid-template-columns:1fr;gap:24px}.homecall .homeactions{margin:0 0 10px}.homecall{padding:50px 0}.contactgrid,.split{gap:35px}}
+@media(max-width:620px){.wrap{width:calc(100% - 36px)}.topline{height:38px;font-size:9px}.topinner{gap:10px;justify-content:center}.topinner span:first-child{display:none}.header{height:72px}.brand{gap:7px}.brand img{width:43px;height:43px}.brand b{font-size:16px}.brand small{font-size:8px}.menubtn{display:block}.nav{display:none;position:absolute;left:0;right:0;top:72px;height:auto;padding:12px 22px 20px;background:white;box-shadow:0 12px 20px #102d4b20;flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav a:not(.navcta){height:43px}.nav a.active:after{bottom:0;right:auto;width:30px}.navcta{text-align:center;margin-top:8px}.homehero{height:610px;align-items:flex-end;padding-bottom:73px}.homeherobg{background-image:linear-gradient(90deg,rgba(10,39,77,.95) 0%,rgba(13,44,83,.84) 50%,rgba(15,47,88,.48) 100%),url('/assets/hero-technician.webp');background-position:61% center}.homeherocopy h1{font-size:36px;line-height:1.23;letter-spacing:-.8px;margin-bottom:20px}.homeherocopy p{font-size:13px;line-height:1.7}.homeactions{gap:10px;margin-top:27px;flex-wrap:wrap}.button{font-size:11px;padding:10px 12px;min-height:42px}.homeabout{min-height:0}.homeaboutgrid{grid-template-columns:1fr;gap:29px;padding-block:55px}.homeaboutgrid>img{height:255px}.homeabout h2,.centerheading h2{font-size:25px;margin-bottom:17px}.homeabout p{font-size:13px}.eyebrow{font-size:12px;margin-bottom:12px}.homeservices{padding:55px 0}.centerheading p{font-size:12px;margin-bottom:27px}.desktopbreak{display:none}.homecards,.projectcards{grid-template-columns:1fr 1fr;gap:9px}.homecard{min-height:365px}.cardphoto{height:155px}.serviceicon{top:137px;left:10px;width:31px;height:30px;font-size:15px}.cardcopy{padding:14px 11px}.cardcopy h3{font-size:13px;line-height:1.3;margin-bottom:8px}.cardcopy p{font-size:11px;line-height:1.45;padding-left:9px}.homebenefits{padding:55px 0}.benefitgrid{gap:28px}.benefitintro h2{font-size:25px;margin-bottom:16px}.benefitintro>p{font-size:13px;margin-bottom:20px}.miniphotos img{height:130px}.benefitcards{gap:9px}.benefit{height:auto;min-height:165px;padding:17px 13px}.benefit h3{font-size:14px;margin-bottom:8px}.benefit p{font-size:11px;line-height:1.5}.homeprojects{padding:56px 0}.projectcards{gap:9px}.projectcard>img{height:145px}.projectcard h3{font-size:12px;line-height:1.35;min-height:59px;padding:10px}.homecall{min-height:0;padding:43px 0}.homecall h2{font-size:24px;margin-bottom:14px}.homecall p{font-size:12px}.homecallinner{gap:22px}.homecall .homeactions{gap:9px}.homecall .outlinebutton{min-width:0}.footer{padding-top:45px}.footergrid{grid-template-columns:1fr 1fr;gap:20px}.footergrid>div:first-child{grid-column:1 / -1}.footer h3{font-size:15px;margin-bottom:14px}.footer p,.footergrid>div>a:not(.brand){font-size:11px}.footergrid>div:first-child>p{font-size:12px}.footbrand img{width:45px;height:45px}.footbrand b{font-size:16px}.footbrand small{font-size:8px}.social{gap:7px}.social a{width:31px;height:31px}.social img{width:25px;height:25px}.copyright{font-size:10px;padding:23px 0}.pagehero{padding:46px 0 26px}.pagehero h1{font-size:36px}.pagehero p{font-size:13px}.section{padding:55px 0}.split,.contactgrid{grid-template-columns:1fr;gap:19px}.split h2,.contactgrid h2{font-size:30px}.valuegrid,.servicepagegrid{grid-template-columns:1fr;gap:15px}.valuegrid{gap:10px}.servicefull{padding:18px}.servicefull>img{height:190px}.servicefull .serviceicon{top:196px;left:26px}.num{top:218px;right:22px}.servicefull h2{font-size:19px}.contactform{padding:23px 16px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+@media(max-width:900px){.brand img{width:54px;height:54px}.footbrand img{width:54px;height:54px}}
+@media(max-width:620px){.topinner img{width:14px;height:14px}.brand img{width:43px;height:43px}.brand b{font-size:16px}.footbrand img{width:45px;height:45px}}
+.cardphoto img{object-fit:contain}
+@media(max-width:900px){.brand img.wordmark{width:195px;height:54px}.brand img:first-child{width:54px;height:54px}}
+@media(max-width:620px){.brand img.wordmark{width:150px;height:43px}.brand img:first-child{width:43px;height:43px}.homeherobg{background-position:63% center}.homeaboutgrid>img{width:100%;max-width:554px}.projectcard>img{height:145px}}
+@media(max-width:900px){.homehero{height:630px}.homeabout{height:auto;min-height:0}.homeaboutgrid{padding:55px 0}.homeservices{padding:55px 0}.homeprojects{padding:80px 0}.homeprojects .projectcard>img{height:222px}.homeprojects .projectcard h3{min-height:64px}.projectcards{gap:14px}.homecall{min-height:300px}}
+@media(max-width:620px){.homehero{height:610px}.homeaboutgrid{padding:55px 0}.homeprojects{padding:56px 0}.homeprojects .projectcard>img{height:145px}.homeprojects .projectcard h3{min-height:59px}.homecall{min-height:0}}
+
+
+
+/* Subtle entrance and hover motion */
+@media(max-width:420px){
+  .wrap{width:calc(100% - 28px)}
+  .topinner{gap:8px;font-size:8px}
+  .brand{gap:5px}
+  .brand img.wordmark{width:136px}
+  .homehero{height:590px}
+  .homeherocopy h1{font-size:32px}
+  .homeactions{gap:8px}
+  .homeactions .button{padding-inline:10px;font-size:10px}
+  .homecard{min-height:350px}
+  .cardcopy h3{font-size:12px}
+  .footergrid{column-gap:12px}
+}
+@media(prefers-reduced-motion:reduce){
+  .homeherocopy h1,.homeherocopy>p,.homeherocopy .homeactions,.homecards>.homecard,.projectcards>.projectcard,.servicepagegrid>.servicefull{animation:none!important}
+  .homecard,.projectcard,.servicefull,.benefit,.cardphoto img,.projectcard>img,.servicefull>img,.nav a,.navcta,.social a{transition:none!important}
+}
+
+
+
+/* Blue accents appear on interaction, keeping the resting design calm. */
+@media (hover:hover) and (pointer:fine){.textlink:hover{color:#2863a0}}
+
+
+
+/* Reference icons and hover-first card states */
+.card-2{background:#fff}
+.card-2 .cardcopy h3,.card-2 .cardcopy p{color:#173a68}
+
+
+/* A quiet light sweep gives the reference hero extra depth without covering its photo. */
+@media(prefers-reduced-motion:reduce){.homehero:after{animation:none}.serviceicon img{transition:none}}
+
+
+
+/* Fit the top bar, navigation, and complete hero in the initial viewport. */
+.centerheading h2{font-size:28px;margin-bottom:22px}
+.centerheading p{margin-bottom:34px}
+.cardphoto{height:205px}
+@media(max-width:900px){
+ .topline{height:42px}
+ .header{height:72px}
+ .homehero{height:min(660px,calc(100vh - 114px));height:min(660px,calc(100svh - 114px));min-height:440px}
+ .homeabout{min-height:0}
+ .homecard{min-height:380px}
+ .cardphoto{height:190px}
+ .homeprojects .projectcard>img{height:220px}
+}
+@media(max-width:620px){
+ .topline{height:38px}
+ .header{height:72px}
+ .homehero{height:min(660px,calc(100vh - 110px));height:min(660px,calc(100svh - 110px));min-height:420px}
+ .homeherocopy h1{font-size:clamp(29px,8vw,35px);margin-bottom:17px}
+ .homeherocopy p{font-size:12px;line-height:1.6}
+ .homeactions{margin-top:22px}
+ .homeaboutgrid{padding:44px 0;gap:24px}
+ .homeservices{padding:45px 0 50px}
+ .homecard{min-height:330px}
+ .cardphoto{height:145px}
+ .homeprojects{padding:48px 0}
+ .homeprojects .projectcard>img{height:145px}
+ .homebenefits{padding:48px 0}
+ .homecall{padding:38px 0}
+ .footer{padding-top:42px}
+ .footergrid{padding-bottom:34px}
+}
+@media(prefers-reduced-motion:reduce){
+ .reveal-section,.reveal-section.is-visible{opacity:1;transform:none;transition:none}
+}
+
+
+
+/* Slightly smaller header mark to match the supplied PDF proportions. */
+@media(max-width:900px){.header{height:68px}.brand img:first-child{width:50px;height:50px}.brand img.wordmark{width:184px;height:50px}}
+@media(max-width:620px){.header{height:64px}.nav{top:64px}.brand img:first-child{width:42px;height:42px}.brand img.wordmark{width:147px;height:42px}}
+
+
+/* Slow background drift adds depth while the hero copy enters quickly. */
+@media(prefers-reduced-motion:reduce){.homeherobg{animation:none;transform:scale(1)}}
+
+
+
+/* Anchor the service badges onto the photo edge and keep headings clear. */
+.cardphoto{height:190px}
+.cardcopy{padding:26px 16px 19px}
+.cardcopy h3{margin-bottom:10px}
+@media(max-width:900px){
+ .homecards,.projectcards{gap:12px}
+ .homecard{min-height:370px}
+ .cardphoto{height:178px}
+ .serviceicon{top:154px}
+ .cardcopy{padding:25px 14px 17px}
+}
+@media(max-width:620px){
+ .homecards,.projectcards{gap:9px}
+ .homecard{min-height:320px}
+ .cardphoto{height:145px}
+ .serviceicon{top:121px;left:10px;width:28px;height:28px}
+ .serviceicon img{width:16px;height:16px}
+ .cardcopy{padding:23px 11px 14px}
+ .cardcopy h3{margin-bottom:8px}
+ .homeservices .centerbutton{margin-top:24px}
+ .homeprojects .projectcard>img{height:145px}
+}
+
+
+
+/* Benefits section: staggered reveal and gentle, tactile hover response. */
+.benefitcards .benefit:nth-child(2){transition-delay:.08s}
+.benefitcards .benefit:nth-child(3){transition-delay:.16s}
+.benefitcards .benefit:nth-child(4){transition-delay:.24s}
+.miniphotos img:nth-child(2){transition-delay:.1s;transition:transform .38s cubic-bezier(.2,.75,.25,1),box-shadow .38s ease,opacity .5s ease}
+@media(hover:hover) and (pointer:fine){
+ .benefit{position:relative;overflow:hidden;transition:transform .32s cubic-bezier(.2,.75,.25,1),box-shadow .32s ease,border-color .28s ease,background-color .28s ease}
+ .benefit:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(112deg,transparent 24%,rgba(255,255,255,.13) 48%,transparent 67%);transform:translateX(-115%);transition:transform .62s cubic-bezier(.2,.75,.25,1)}
+ .benefit:hover{transform:translateY(-7px) scale(1.012);box-shadow:0 18px 32px #112b4930;border-color:#6f8eaf}
+ .benefit:hover:after{transform:translateX(115%)}
+ .miniphotos img:hover{transform:translateY(-4px) scale(1.035);box-shadow:0 14px 24px #0c2c5533}
+}
+@media(prefers-reduced-motion:reduce){.benefitintro.reveal-section,.benefitcards .benefit,.miniphotos img{transition:none!important;transition-delay:0s!important}}
+
+
+
+/* Desktop header proportions restored from the supplied PDF reference. */
+@media(min-width:901px){
+ .topline{height:60px;font-size:14px}
+ .topinner{gap:22px}
+ .header{height:90px}
+ .brand{gap:12px}
+ .brand img:first-child{width:70px;height:70px}
+ .brand img.wordmark{width:248px;height:70px}
+ .nav{gap:32px;font-size:14px}
+ .homehero{height:min(700px,calc(100vh - 150px));height:min(700px,calc(100svh - 150px));min-height:min(460px,calc(100svh - 150px))}
+}
+@media(min-width:1440px){.homeherocopy h1{font-size:48px}}
+
+
+
+/* Footer scale, separator, and background contrast aligned to the PDF. */
+@media(min-width:901px){
+ .footer{padding-top:66px}
+ .footergrid{gap:48px;padding-bottom:46px}
+ .footbrand img:first-child{width:68px;height:68px}
+ .footbrand b{font-size:28px}
+ .footbrand small{font-size:14px}
+ .footergrid>div:first-child>p{font-size:16px;line-height:1.55;max-width:350px;margin:22px 0}
+ .footer h3{font-size:25px;margin-bottom:24px}
+ .footer p,.footergrid>div>a:not(.brand){font-size:16px;line-height:1.55}
+ .social a{width:40px;height:40px}
+ .social img{width:32px;height:32px}
+ .copyright{padding:35px 0 27px;font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.footer a,.social a{transition:none}}
+
+
+
+/* Services page layout follows Services (2).pdf. */
+.catalog-service-icon{position:absolute;left:16px;bottom:-11px;width:30px;height:30px;display:grid;place-items:center;background:#123761;border-radius:3px;box-shadow:0 4px 10px #102d4b28;z-index:1}
+.catalog-service-icon img{width:17px;height:18px;object-fit:contain}
+@media(hover:hover) and (pointer:fine){
+ .service-catalog-card:hover,.service-catalog-card:focus-within{background:#123761;border-color:#123761;color:#fff;transform:translateY(-5px);box-shadow:0 14px 28px #0e2e5129}
+ .service-catalog-card:hover .service-catalog-copy h3,.service-catalog-card:hover .service-catalog-copy p,.service-catalog-card:hover .service-catalog-copy li{color:#fff}
+ .service-catalog-card:hover .service-catalog-photo>img{transform:scale(1.025)}
+}
+@media(max-width:900px){
+ .services-page-hero{height:330px}
+ .services-page-hero h1{font-size:40px}
+ .services-overview{padding:54px 0 62px}
+ .services-overview>.wrap{width:calc(100% - 48px)}
+ .service-catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+ .service-catalog-copy{padding:21px 15px 18px}
+}
+@media(max-width:620px){
+ .services-page-hero{height:250px;background-position:53% center}
+ .services-page-hero h1{font-size:34px}
+ .services-overview{padding:42px 0 48px}
+ .services-overview>.wrap{width:calc(100% - 32px)}
+ .services-intro{margin-bottom:25px}
+ .services-intro h2{font-size:23px;margin-bottom:13px}
+ .services-intro p{font-size:12px;line-height:1.55}
+ .service-catalog-grid{grid-template-columns:1fr;gap:14px}
+ .service-catalog-card{max-width:460px;width:100%;margin-inline:auto}
+ .service-catalog-copy{padding:22px 16px 18px}
+ .service-catalog-copy h3{font-size:16px}
+ .service-catalog-copy p,.service-catalog-copy li{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){.services-page-hero{animation:none}.service-catalog-card,.service-catalog-photo>img{transition:none}}
+
+
+
+/* Requested shorter services banner; About banner follows its supplied page PDF. */
+@media(max-width:900px){.services-page-hero{height:280px}}
+@media(max-width:620px){.services-page-hero{height:210px}}
+
+
+/* About page recreation from About.pdf */
+.triangle{position:absolute;left:50%;top:23px;width:154px;height:145px;transform:translateX(-50%);background:#173a68;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.triangle:before{content:'';position:absolute;inset:7px 8px 8px;background:#f5f7f8;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.triangle span{position:absolute;left:50%;top:76px;transform:translateX(-50%);font-weight:700;color:#1c6085;font-size:11px;z-index:1}
+.diagram-quality{top:0;left:50%;transform:translateX(-50%)}
+.diagram-cost{left:0;top:89px}
+.diagram-time{right:0;top:89px}
+.diagram-value{bottom:0;left:50%;transform:translateX(-50%);white-space:nowrap}
+@media(hover:hover) and (pointer:fine){
+ .advantage-card:hover{transform:translateY(-4px);box-shadow:0 10px 22px #102d4b20;border-color:#426b95}
+}
+@media(max-width:900px){
+ .about-page-hero{height:320px}
+ .about-introduction{padding:42px 0}
+ .about-intro-grid,.chairman-grid,.vision-grid{grid-template-columns:1fr;gap:30px}
+ .about-photo-collage{height:480px;max-width:650px;width:100%;margin:auto}
+ .about-intro-copy{max-width:760px}
+ .chairman-art{max-width:540px}
+ .advantage-layout{display:flex;flex-direction:column;gap:18px}
+ .advantage-column{width:100%;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .value-diagram{order:2;width:220px}
+ .advantage-column:first-child{order:1}.advantage-column:last-child{order:3}
+ .vision-collage{min-height:0;height:500px;max-width:650px;width:100%;margin:auto}
+ .vision-copy{max-width:760px}
+ .commitment-grid{grid-template-columns:1fr;gap:24px}
+}
+@media(max-width:620px){
+ .about-page-hero{height:240px}
+ .about-page-hero h1{font-size:35px}
+ .about-introduction{padding:34px 0}
+ .about-intro-grid{gap:25px}
+ .about-photo-collage{height:330px;grid-template-columns:1.05fr 1fr;gap:7px}
+ .about-intro-copy h2,.chairman-copy h2,.vision-copy h2{font-size:22px;margin-bottom:14px}
+ .about-intro-copy p,.chairman-copy p{font-size:12px;line-height:1.55}
+ .chairman-message{padding:40px 0}
+ .chairman-grid{gap:20px}
+ .chairman-art{width:100%}
+ .about-advantages{padding:38px 0}
+ .about-advantages h2{font-size:22px;margin-bottom:22px}
+ .advantage-column{grid-template-columns:1fr;gap:10px}
+ .advantage-card{min-height:74px;padding:11px 12px}
+ .value-diagram{height:175px}
+ .about-vision{padding:40px 0}
+ .vision-collage{height:340px;gap:8px}
+ .vision-copy p{font-size:12px}
+ .about-commitment{padding:34px 0}
+ .commitment-items{grid-template-columns:1fr}
+ .commitment-items article{border-right:0;border-bottom:1px solid #d5dce4}
+ .commitment-items article:last-child{border-bottom:0}
+}
+@media(prefers-reduced-motion:reduce){.about-page-hero{animation:none}.advantage-card{transition:none}}
+@media(max-width:620px){.chairman-art:after{right:18px;top:8px;font-size:44px}}
+
+
+/* Projects and Contact pages follow their supplied page references. */
+.filter-button{border:1px solid #cbd5e0;border-radius:4px;background:#fff;color:var(--ink);font-size:14px;font-weight:500;padding:10px 17px;cursor:pointer;transition:color .2s,background .2s,border-color .2s,transform .2s}
+.filter-button:hover,.filter-button:focus-visible{background:#143963;color:#fff;border-color:#143963;transform:translateY(-2px)}
+.filter-button.active{background:#143963;color:#fff;border-color:#143963}
+.no-projects{grid-column:1/-1;text-align:center;padding:30px;color:#536171}
+.reference-contact-form{display:grid;gap:14px}
+.reference-contact-form label{display:block;min-width:0}
+.reference-contact-form input,.reference-contact-form select,.reference-contact-form textarea{width:100%;min-height:49px;padding:12px 14px;border:1px solid #d4dce5;border-radius:4px;background:#fff;color:#26394e;font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s}
+.reference-contact-form textarea{resize:vertical;min-height:132px}
+.reference-contact-form input:focus,.reference-contact-form select:focus,.reference-contact-form textarea:focus{border-color:#234c7b;box-shadow:0 0 0 3px #234c7b1a}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:900px){.projects-page-hero,.contact-page-hero{height:min(400px,50svh)}.project-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-enquiry-grid{grid-template-columns:1fr;gap:42px}.contact-details-grid{gap:14px}.contact-detail-card{padding:22px 20px}}
+@media(max-width:620px){.projects-page-hero,.contact-page-hero{height:min(400px,50svh);min-height:230px}.projects-page-hero h1,.contact-page-hero h1{font-size:35px}.projects-overview{padding:44px 0 54px}.projects-intro h2,.contact-details-intro h2{font-size:25px}.projects-intro p{font-size:14px}.project-filters{gap:8px;margin:22px 0}.filter-button{font-size:13px;padding:9px 12px}.project-gallery,.contact-details-grid{grid-template-columns:1fr}.portfolio-copy{min-height:0}.contact-details-section{padding:42px 0 48px}.contact-detail-card{min-height:0;padding:22px}.contact-enquiry-section{padding:48px 0 56px}.contact-form-row{grid-template-columns:1fr}.contact-enquiry-copy h2{font-size:27px}}
+@media(prefers-reduced-motion:reduce){.projects-page-hero,.contact-page-hero{animation:none}.portfolio-card,.portfolio-photo img,.filter-button,.contact-detail-card,.contact-social a{transition:none}}
+
+/* Inner-page banners share the half-viewport sizing shown in the references. */
+@media(prefers-reduced-motion:reduce){.services-page-hero,.about-page-hero,.projects-page-hero,.contact-page-hero{animation:none}}
+
+/* Final responsive pass: show the complete hero artwork at every breakpoint. */
+html,body,#root{width:100%;min-height:100%;overflow-x:clip}
+img{max-width:100%}
+@media(max-width:1100px){.topinner{gap:8px 15px}.nav{gap:20px}.brand img.wordmark{width:180px;height:48px}.homehero{height:min(40.3vw,calc(100svh - 112px))!important}.homeherocopy h1{font-size:clamp(33px,4vw,42px)}}
+@media(max-width:900px){.topline{min-height:40px}.topinner{min-height:40px}.header{height:68px}.navrow{position:relative}.menubtn{display:grid;place-items:center;width:42px;height:42px;border:1px solid #d5dde6;border-radius:4px;background:#fff;color:#123761;font-size:22px;cursor:pointer}.nav{display:none;position:absolute;top:100%;left:0;right:0;height:auto;padding:12px 18px 18px;background:#fff;box-shadow:0 12px 18px #0e29471f;z-index:20;flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav a:not(.navcta){height:auto;min-height:44px;padding:10px 0}.nav a.active:after{bottom:4px;right:auto;width:35px}.nav .navcta{margin-top:10px;text-align:center}.homehero{height:min(40.3vw,calc(100svh - 108px))!important}.homeaboutgrid,.benefitgrid{grid-template-columns:1fr;gap:28px}.homeaboutgrid>img{justify-self:center;max-width:600px;height:auto;aspect-ratio:1.55;object-fit:cover}.homecards{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.homecard{min-height:0}.projectcards{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.homecallinner{grid-template-columns:1fr;gap:10px;padding-block:32px}.footergrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}.about-photo-collage{height:clamp(300px,55vw,480px)}.vision-collage{height:clamp(280px,54vw,450px)}.advantage-layout{grid-template-columns:1fr}.value-diagram{order:2}.contact-details-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.wrap,.services-overview>.wrap{width:calc(100% - 32px)}.topline{min-height:0}.topinner{min-height:0;justify-content:center;gap:5px 12px;padding:7px 0;font-size:10px}.topinner .top-location{order:2}.topinner span:nth-child(2){order:1}.topinner span:nth-child(3){order:3}.topinner img{width:14px;height:14px}.header{height:62px}.brand{gap:5px}.brand img:first-child{width:38px;height:38px}.brand img.wordmark{width:min(148px,43vw);height:auto}.menubtn{width:38px;height:38px}.nav{top:62px}.homehero{height:auto!important;min-height:0!important;display:flex;flex-direction:column;align-items:stretch;overflow:hidden}.homeherobg{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:1700/685;object-fit:contain;object-position:center;background:#143963}.homehero:after{display:none}.homeherocopy{width:100%;padding:26px 20px 32px;animation:fadeUpSoft .5s ease both}.homeherocopy h1{font-size:clamp(27px,7.8vw,34px);line-height:1.16;letter-spacing:-.5px;margin-bottom:14px}.homeherocopy p{max-width:100%;font-size:13px;line-height:1.6}.homeactions{gap:10px;margin-top:20px}.homeactions .button{min-height:44px;padding:10px 13px;font-size:12px}.homeaboutgrid{padding:38px 0;gap:22px}.homeaboutgrid>img{aspect-ratio:1.4}.homeabout h2,.centerheading h2,.benefitintro h2,.homecall h2{font-size:24px;margin-bottom:16px}.homeabout p,.benefitintro>p,.homecall p{font-size:13px;line-height:1.65}.homeservices{padding:40px 0}.centerheading p{font-size:13px;margin-bottom:24px}.desktopbreak{display:none}.homecards,.projectcards{grid-template-columns:1fr;gap:14px}.homecard{min-height:0}.cardphoto{height:auto;aspect-ratio:1.6}.serviceicon{top:auto;bottom:auto;transform:translateY(-50%)}.cardcopy{padding:18px 16px}.homebenefits{padding:40px 0}.miniphotos{gap:8px}.miniphotos img{height:auto;aspect-ratio:1.35;object-fit:cover}.benefitcards{grid-template-columns:1fr;gap:10px}.benefit{height:auto;min-height:145px;padding:22px 18px}.homeprojects{padding:42px 0}.homeprojects .projectcard>img{height:auto;aspect-ratio:1.65}.homeprojects .projectcard h3{min-height:0}.homecall{padding:22px 0}.homecallinner{padding-block:18px}.homecall .homeactions{margin-bottom:8px}.footer{padding-top:38px}.footergrid{grid-template-columns:1fr;gap:26px;padding-bottom:28px}.copyright{font-size:11px;line-height:1.5}.about-photo-collage{height:auto;min-height:0;aspect-ratio:.95}.about-intro-grid{gap:22px}.vision-collage{height:auto;min-height:0;aspect-ratio:1.15}.contact-details-grid{grid-template-columns:1fr}.contact-enquiry-grid{gap:30px}.contact-form-row{grid-template-columns:1fr}.project-gallery{grid-template-columns:1fr}.project-filters{justify-content:flex-start}.projects-page-hero,.contact-page-hero,.services-page-hero,.about-page-hero{height:min(50svh,400px)!important;min-height:0!important}}
+@media(max-width:370px){.topinner{font-size:9px;gap:5px 8px}.topinner span{gap:5px}.brand img.wordmark{width:126px}.homeactions{align-items:stretch;flex-direction:column}.homeactions .button{width:100%}.about-photo-collage{aspect-ratio:.82}.portfolio-copy{padding:16px}.contact-detail-card{padding:18px}}
+
+/* Consistent motion cues; no flashing text, to keep reading comfortable. */
+@media(prefers-reduced-motion:reduce){.eyebrow:after,.homeactions .homebutton,.homehero:after{animation:none!important}}
+@media(max-width:620px){.homehero:before{display:none}}
+
+/* Keep the complete home photograph in frame without the dark crop overlay. */
+
+/* More consistent scroll entrances across sections and their cards. */
+@media(max-width:900px){.homeherocopy{width:min(550px,calc(100% - 48px));margin-left:24px}.homeherocopy h1{font-size:clamp(30px,4vw,40px)}}
+@media(max-width:620px){.homehero{aspect-ratio:auto;display:flex;flex-direction:column;align-items:stretch;background:#fff}.homeherobg{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:1700/685;object-fit:fill;display:block}.homeherocopy{width:100%;margin:0;padding:26px 20px 30px;border-radius:0;box-shadow:none;background:#fff}.homeherocopy h1{font-size:clamp(28px,7.8vw,35px);margin-bottom:14px}.homeherocopy p{font-size:13px}.homeherocopy .outlinebutton{background:#fff;color:#153963;border-color:#153963}}
+@media(max-width:370px){.homeherocopy{padding:22px 16px 26px}}
+@media(prefers-reduced-motion:reduce){.reveal-section,.reveal-section.is-visible{opacity:1;transform:none;transition:none!important}.eyebrow:after,.homeactions .homebutton{animation:none!important}}
+
+/* Latest hero treatment: use the asset at its own aspect ratio, edge to edge, with no blue tint or crop. */
+@media(max-width:900px){.homeherocopy{width:min(550px,calc(100% - 48px));margin-left:24px}.homeherocopy h1{font-size:clamp(30px,4vw,40px)}}
+@media(max-width:620px){.homehero{aspect-ratio:auto;display:flex;flex-direction:column;align-items:stretch;background:#fff}.homeherobg{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:1700/685;object-fit:fill;display:block}.homeherocopy{width:100%;margin:0;padding:26px 20px 30px;border-radius:0;box-shadow:none;background:#fff}.homeherocopy h1{font-size:clamp(28px,7.8vw,35px);margin-bottom:14px}.homeherocopy p{font-size:13px}.homeherocopy .outlinebutton{background:#fff;color:#153963;border-color:#153963}}
+@media(max-width:370px){.homeherocopy{padding:22px 16px 26px}}
+
+/* Match the PDF hero asset: its full-bleed blue overlay is part of the supplied image. */
+@media(max-width:900px){.homehero{aspect-ratio:1440/750}.homeherocopy{width:calc(100% - 48px);margin-inline:auto}.homeherocopy h1{font-size:clamp(30px,4vw,40px)}}
+@media(max-width:620px){.homehero{aspect-ratio:auto;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;background:#123963}.homeherobg{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:1440/750;object-fit:fill}.homehero:after{inset:0 0 auto;height:auto;aspect-ratio:1440/750}.homeherocopy{width:100%;margin:0;padding:24px 20px 30px;background:#123963;color:#fff}.homeherocopy h1{font-size:clamp(28px,7.5vw,35px);line-height:1.16;margin-bottom:15px}.homeherocopy p{font-size:13px;line-height:1.6}.homeactions{gap:10px;margin-top:20px}.homeactions .button{min-height:44px;padding:10px 13px;font-size:12px}}
+@media(max-width:370px){.homeherocopy{padding:21px 16px 25px}.homeactions{align-items:stretch;flex-direction:column}.homeactions .button{width:100%}}
+
+/* Responsive navigation polish and touch-friendly animation. */
+@media(max-width:900px){.header{height:68px}.navrow{min-height:68px}.menubtn{border:0;background:transparent;border-radius:6px;width:44px;height:44px;font-size:25px;transition:background .2s,transform .2s}.menubtn:hover,.menubtn:focus-visible{background:#eef3f8;transform:scale(1.04)}.nav.open{animation:menuDrop .22s ease both;border-top:1px solid #e1e6ec}.nav a:not(.navcta){font-size:15px}.nav a.active:after{transition:width .2s}}
+@media(prefers-reduced-motion:reduce){.homehero:after,.nav.open{animation:none!important}.reveal-section{will-change:auto}}
+
+/* About PDF details: framed chairman mark and supplied value diagram. */
+
+/* .chairman-art{position:relative;isolation:isolate;width:100%;max-width:590px;aspect-ratio:1.48;display:grid;place-items:center;padding:28px;background:#fff;border-radius:4px;box-shadow:0 7px 16px #122d4c20}
+.chairman-art:before{content:'';position:absolute;z-index:-1;inset:12px -12px -12px 12px;background:#12345f;border-radius:3px}
+.chairman-art img{position:relative;z-index:1;display:block;width:88%;height:88%;object-fit:contain;filter:none}
+.chairman-art:after{right:19px;top:5px;color:#c7cfd9;font:700 64px/1 Georgia,serif} */
+@media(max-width:900px){.chairman-art{width:min(100%,540px);margin-inline:auto}.value-diagram{width:230px;height:230px}}
+@media(max-width:620px){.chairman-art{width:calc(100% - 12px);padding:18px;aspect-ratio:1.48}.chairman-art:before{inset:9px -9px -9px 9px}.chairman-art:after{right:12px;top:3px;font-size:48px}.value-diagram{width:min(220px,70vw);height:auto;aspect-ratio:1}}
+
+/* Fit the supplied values diagram inside its dedicated center column. */
+@media(max-width:900px){.advantage-layout{display:flex;flex-direction:column;gap:18px}.value-diagram{width:220px;height:220px;order:2}.advantage-column:first-child{order:1}.advantage-column:last-child{order:3}}
+@media(max-width:620px){.value-diagram{width:min(220px,70vw);height:auto;aspect-ratio:1}}
+
+/* Fit the complete Home hero below the shared header on desktop and tablet. */
+@media(min-width:621px){.homehero{height:min(52.083vw,calc(100svh - 112px))!important;min-height:0!important;aspect-ratio:auto!important}.homeherobg{object-fit:contain!important}}
+@media(max-width:900px) and (min-width:621px){.homehero{height:min(52.083vw,calc(100svh - 108px))!important}}
+@media(max-width:900px) and (min-width:621px){.homehero{height:min(max(52.083vw,420px),calc(100svh - 108px))!important}}
+
+/* Touch devices receive motion feedback without needing mouse hover. */
+@media(hover:none){
+ .homecard:active,.projectcard:active,.service-catalog-card:active,.advantage-card:active,.portfolio-card:active,.contact-detail-card:active{transform:translateY(-2px) scale(.99);box-shadow:0 10px 22px #102d4b26}
+ .button:active,.filter-button:active,.menubtn:active,.contact-social a:active{transform:scale(.97)}
+}
+
+/* Keep the complete hero artwork visible, fill its side gutters with its navy edge color, and align copy to the visible image. */
+@media(min-width:621px){.homeherocopy{width:min(1240px,calc(100vw - 64px),calc(192svh - 215px));margin-inline:auto}}
+@media(max-width:620px){.homeherocopy{width:100%;background:#123963}}
+
+/* Match the supplied hero reference: full-bleed image, no side gutters. */
+@media(min-width:621px){.homeherobg{object-fit:cover!important}}
+@media(max-width:620px){.homeherobg{object-fit:cover!important}}
+
+/* Small finishing details from the supplied About-page reference. */
+.outlinebutton:hover,.outlinebutton:focus-visible{background-color:#fff!important;border-color:#fff!important;color:#123761!important}
+.filter-button:hover,.filter-button:focus-visible{background-color:#28588d;border-color:#28588d;color:#fff}
+@media(hover:none){.button:active,.navcta:active,.filter-button:active,.menubtn:active{background-color:#28588d!important;border-color:#28588d!important;color:#fff!important;transform:scale(.97)}}
+@media(prefers-reduced-motion:reduce){.chairman-art{animation:none}}
+
+/* Chairman message layout matched to the latest supplied reference. */
+
+/* Keep the chairman logo panel fixed in the reference position. */
+
+
+
+
+
+
+/* Chairman artwork — clean, two-layer frame */
+
+
+/* Offset white backing */
+
+
+/* Navy frame */
+
+
+/* Single inner white card */
+
+
+/* Exactly one quotation mark */
+
+
+
+/* Unique chairman artwork styles — isolated from existing website CSS */
+
+
+
+
+/* Chairman logo — matches the supplied reference screenshot */
+
+
+/* Navy panel behind the white card */
+
+
+/* Single large white foreground card */
+
+
+/* Large centered logo */
+
+
+/* One quote on the white card */
+
+
+/* PROJECTS PAGE — FINAL RESPONSIVE ALIGNMENT FIX */
+
+.projects-overview {
+  width: 100%;
+  padding: 64px 0 76px;
+  overflow: hidden;
+}
+
+.projects-overview > .wrap {
+  width: min(1180px, calc(100% - 64px));
+  max-width: 1180px;
+  margin-inline: auto;
+}
+
+.projects-intro {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.projects-intro h2 {
+  margin: 0 0 16px;
+  font-size: clamp(25px, 3vw, 36px);
+  line-height: 1.25;
+  color: #173963;
+}
+
+.projects-intro p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #535c66;
+}
+
+.project-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 28px 0 34px;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 26px;
+  width: 100%;
+}
+
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #dce2e8;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgb(18 50 93 / 8%);
+}
+
+.portfolio-photo {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #f3f6f8;
+}
+
+.portfolio-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.portfolio-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 22px;
+}
+
+.portfolio-copy h3 {
+  margin: 0 0 12px;
+  color: #173963;
+  font-size: 19px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.portfolio-copy p {
+  margin: 0 0 18px;
+  color: #535c66;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.portfolio-copy strong {
+  margin-top: auto;
+  color: #234c7b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.no-projects {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 30px 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .portfolio-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgb(18 50 93 / 15%);
+  }
+
+  .portfolio-card:hover .portfolio-photo img {
+    transform: scale(1.04);
+  }
+}
+
+/* Tablet */
+@media (min-width: 621px) and (max-width: 1000px) {
+  .projects-overview > .wrap {
+    width: calc(100% - 48px);
+  }
+
+  .project-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .portfolio-copy {
+    padding: 18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 620px) {
+  .projects-overview {
+    padding: 40px 0 50px;
+  }
+
+  .projects-overview > .wrap {
+    width: calc(100% - 32px);
+  }
+
+  .projects-intro {
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .projects-intro h2 {
+    font-size: 25px;
+    line-height: 1.3;
+  }
+
+  .projects-intro p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .project-filters {
+    justify-content: flex-start;
+    gap: 8px;
+    margin: 22px 0 26px;
+  }
+
+  .filter-button {
+    max-width: 100%;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .project-gallery {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .portfolio-card {
+    height: auto;
+  }
+
+  .portfolio-photo {
+    aspect-ratio: 16 / 10;
+  }
+
+  .portfolio-copy {
+    padding: 18px;
+  }
+
+  .portfolio-copy h3 {
+    font-size: 18px;
+  }
+
+  .portfolio-copy p {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-card,
+  .portfolio-photo img {
+    transition: none !important;
+  }
+}
+
+/* MOBILE & TABLET — BALANCED ALIGNMENT */
+
+@media (max-width: 900px) {
+  /* Center section headings and introductory content */
+  .services-intro,
+  .projects-intro,
+  .contact-details-intro {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .services-intro h2,
+  .projects-intro h2,
+  .contact-details-intro h2 {
+    text-align: center;
+  }
+
+  .services-intro p,
+  .projects-intro p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Center filters instead of grouping them on the left */
+  .project-filters {
+    justify-content: center;
+  }
+
+  /* Keep cards centered within their grid */
+  .service-catalog-card,
+  .portfolio-card,
+  .contact-detail-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Mobile refinements */
+@media (max-width: 620px) {
+  .services-overview > .wrap,
+  .projects-overview > .wrap,
+  .contact-details-section > .wrap,
+  .contact-enquiry-section > .wrap {
+    width: calc(100% - 32px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .services-intro,
+  .projects-intro,
+  .contact-details-intro {
+    text-align: center;
+  }
+
+  .service-catalog-card,
+  .portfolio-card,
+  .contact-detail-card {
+    width: 100%;
+    max-width: 460px;
+  }
+
+  .project-filters {
+    justify-content: center;
+  }
+
+  /* Keep card descriptions comfortable to read */
+  .service-catalog-copy,
+  .portfolio-copy {
+    text-align: left;
+  }
+}
+
+
+/* =========================================
+   FOOTER — ANIMATIONS & HOVER EFFECTS
+   ========================================= */
+
+/* Smooth entrance */
+.footergrid > div {
+  animation: footerFadeUp 0.65s ease both;
+}
+
+.footergrid > div:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.footergrid > div:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.footergrid > div:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.footer .copyright {
+  animation: footerFadeIn 0.8s ease both;
+  animation-delay: 0.25s;
+}
+
+@keyframes footerFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes footerFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Headings */
+.footer h3 {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 28px;
+  height: 2px;
+  border-radius: 2px;
+  background: #c9d9ed;
+  transform: translateX(-50%);
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* Footer links */
+.footergrid > div > a:not(.brand) {
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.footergrid > div > a:not(.brand):focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* Logo */
+.footer .footbrand img {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Social icons */
+.footer .social a {
+  border: 1px solid transparent;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.footer .social img {
+  transition: transform 0.25s ease;
+}
+
+/* Desktop hover effects */
+@media (hover: hover) and (pointer: fine) {
+  .footergrid > div > a:not(.brand):hover {
+    color: #fff;
+    transform: translateY(-2px);
+    opacity: 1;
+  }
+
+  .footer h3:hover::after {
+    width: 48px;
+    background-color: #fff;
+  }
+
+  .footer .footbrand:hover img {
+    transform: translateY(-3px) rotate(-3deg);
+    box-shadow: 0 8px 18px #00000030;
+  }
+
+  .footer .social a:hover {
+    transform: translateY(-4px);
+    background: #ffffff18;
+    border-color: #ffffff60;
+    box-shadow: 0 6px 16px #00000020;
+  }
+
+  .footer .social a:hover img {
+    transform: scale(1.1);
+  }
+}
+
+/* Touch feedback for phones and tablets */
+@media (hover: none) {
+  .footer .social a:active {
+    transform: scale(0.93);
+    background: #ffffff20;
+  }
+
+  .footergrid > div > a:not(.brand):active {
+    color: #fff;
+    opacity: 0.75;
+  }
+
+  .footer .footbrand:active img {
+    transform: scale(0.96);
+  }
+}
+
+/* Keyboard focus */
+.footer a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+/* Accessibility: respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .footergrid > div,
+  .footer .copyright {
+    animation: none !important;
+  }
+
+  .footer h3::after,
+  .footer a,
+  .footer img {
+    transition: none !important;
+  }
+}
+
